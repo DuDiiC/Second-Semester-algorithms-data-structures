@@ -1,0 +1,39 @@
+V1:
+
+Program napisany zachłannie, działający od "szczytu" piramidy może zwracać błędy
+już dla piramidy 4-ropoziomiowej. Nie działa poprawnie nawet dla przykładu podanego
+w treści zadania na platformie Moodle.
+Dla danych wejściowych:
+10
+7 3 8 8 1 0 7 12 10 10
+zwraca niepoprawny wynik 28 (zamiast 30).
+
+Złożoność obliczeniowa pierwszej wersji zależy od ilości porównań,
+na każdym poziomie jest wykonywane jedno, zatem złożoność zależy bezpośrednio od
+liczby poziomów piramidy - O(p), gdzie p - ilosc poziomów piramidy.
+
+V2:
+Program działa zachłannie od podstawy piramidy, wyznaczając na początku maksymalną wagę
+na najniższym poziomie, następnie porusza się w górę piramidy, wybierając za każdym razem
+większą wartość.
+Ten program również zwraca błędy dla pewnych danych piramidy 4-ropoziomowej, przykładowo:
+Dla danych wejściowych:
+10
+7 3 8 8 1 0 7 12 13 10
+zwraca niepoprawny wynik 29 (zamiast 30).
+
+Złożoność: Tutaj również złożoność zależy od liczby porównań, czyli poziomów piramidy, 
+jednak dodatkowo należy ustalić największy element na ostatnim poziomie, gdzie jest n elementów.
+Ilosc porównań to p, a ustalenie najwiekszego elementu wymaga p-1 porównań, czyli razem złożoność
+wyliczy się z p + (p-1), otrzymując O(p).
+
+V3:
+Program działa dynamicznie, poczynając od przedostatniego poziomu piramidy, dla każdego elementu
+na tym poziomie wybiera element z poziomu niżej o wyższej wadze i dodaje jego wartość. Operacja
+jest powtarzana aż dotrze do szczytu piramidy, w którym znajdzie się największa możliwa waga po
+przejściu piramidy.
+
+Złożoność: Zależy od liczby porównań, z tym że mamy ich tutaj więcej niż w poprzednich przypadkach. 
+Na każdy element piramidy (nie licząc ostatniego poziomu) przypada jedno porównanie. Zatem jeśli
+przyjmiemy za liczbę elementów n oraz za ilość poziomów piramidy p, otrzymamy złożoność tego
+algorytmy O(n-p).
