@@ -3,7 +3,7 @@ using namespace std;
 
 int index;
 
-void findPostOrder(int left, int right, string pree, string inn); //recurcive function
+void findPostOrder(int left, int right, string pree, string inn); //recursive function
 
 int main() {
 
