@@ -6,7 +6,7 @@
 #include <vector>
 #include <algorithm>
 
-typedef int TYPE;
+typedef int TYPE; //'int' is only example, we can use other types
 
 using namespace std;
 
@@ -27,7 +27,7 @@ void loadDataIntoTheGraph(vector < V >  &G, V v) {
     while(cin >> V1 >> V2 && V1 >0 && V2 > 0) {
         bool there = false;
         for(int i = 0; i < G.size(); ++i) {
-            if(V1 == G[i].value) {
+            if(V1 == G[i].value) { //this vertex belongs to the graph
                 there = true;
                 bool there2 = false;
                 for(int j = 0; j < G[i].setNodes.size(); ++j) {
@@ -36,7 +36,7 @@ void loadDataIntoTheGraph(vector < V >  &G, V v) {
                         break;
                     }
                 }
-                if(!there2) G[i].setNodes.push_back(V2);
+                if(!there2) G[i].setNodes.push_back(V2); //if it is a new vertex
                 break;
             }
         }
@@ -47,7 +47,6 @@ void loadDataIntoTheGraph(vector < V >  &G, V v) {
         }
     }
 }
-
 
 void writeSorted(vector < V > &G) {
 
@@ -65,8 +64,6 @@ void writeSorted(vector < V > &G) {
         cout << endl;
     }
 }
-
-
 
 int main() {
 
