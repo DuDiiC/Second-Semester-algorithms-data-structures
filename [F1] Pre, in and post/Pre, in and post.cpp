@@ -31,13 +31,13 @@ void findPostOrder(int left, int right, string pree, string inn) {
     if(left <= right) {
         int j;
         for(j = left; j <= right; j++) {
-            if(inn[j] == pree[index]) break;
+            if(inn[j] == pree[index]) break; //finding root index in inn = j
         }
 
-        if(j != right+1) {
+        if(j != right+1) { //post-order
             ++index;
-            findPostOrder(left, j-1, pree, inn);
-            findPostOrder(j+1, right, pree, inn);
+            findPostOrder(left, j-1, pree, inn); //for left subtree
+            findPostOrder(j+1, right, pree, inn); // for right subtree
             cout << inn[j];
         }
     } else return; //bottom of recursion
