@@ -3,30 +3,26 @@
 
 using namespace std;
 
-
-
 int main() {
 
     vector < string > slowa;
     string kolejneSlowo;
     int i, j, k;
 
-
     //wczytanie danych
     while(cin >> kolejneSlowo && kolejneSlowo != "#") {
         slowa.push_back(kolejneSlowo);
     }
 
-    //uzupelnianie macierzy powiazaniami miedzy literami
-    bool macierz[26][26] = {0};
-    bool temp[26] = {0};
-    for(i = 0; i < slowa.size()-1; ++i) {
-        for(j = 0; j < min(slowa[i].size(), slowa[i+1].size()); ++j) {
+    bool macierz[26][26] = {0}; //macierz sasiedztwa grafu skierowanego 
+    bool temp[26] = {0}; //wartosc true, jesli litera jest w zbiorze slow
+    for(i = 0; i < slowa.size()-1; ++i) { //dla kazdego slowa
+        for(j = 0; j < min(slowa[i].size(), slowa[i+1].size()); ++j) { 
 
             if(slowa[i][j] != slowa[i+1][j]) { //jak na danej pozycji inne litery
 
                 //dla pozycji odpowiadajacym danym literom (osiaga sie je, odejmujac liczbe
-                //odpowiadajaca literze 'A', dalej analogicznie)
+                //odpowiadajaca literze 'A', dalej analogicznie) tworze wezly
                 macierz[slowa[i][j] - 'A'][slowa[i+1][j] - 'A'] = true;
                 temp[slowa[i][j]-'A'] = true;
                 temp[slowa[i+1][j]-'A'] = true;
@@ -35,8 +31,7 @@ int main() {
         }
     }
 
-    //szukam wspolnych "jedynek" w macierzy, tworzac macierz na ktorej bede bazowal
-    //w szukaniu kolejnosci
+    //korekta
     for(i = 0; i < 26; ++i) {
         for(j = 0; j < 26; ++j) {
             for(k = 0; k < 26; ++k) {
@@ -46,7 +41,7 @@ int main() {
         }
     }
 
-    //posortowanie liter w porzadku od ostatniej do pierwszej
+    //posortowanie topologiczne liter w porzadku od ostatniej do pierwszej
     int ktoraPozycja, iloscLiter = 0;
     char porzadekKoncowy[26];
     for(i = 0; i < 26; ++i) {
