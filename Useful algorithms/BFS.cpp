@@ -1,4 +1,4 @@
-/*Lista sasiedztwa jest najbardziej oplacalna struktura, pozwalajaca zastosowac algorytm DFS,
+/*Lista sasiedztwa jest najbardziej oplacalna struktura, pozwalajaca zastosowac algorytm BFS,
  *daje bowiem dostep do wszyskich sasiadow danego wierzcholka bez wykonywania dodatkowych operacji.
  *Struktura uzywana do algorytmu BFS to kolejka, tutaj nie mozna zastosowac implementacji z funkcja
  *rekurencyjna. Po przejsciu grafu za pomoca BFS, otrzymujemy drzewo rozpinajace, a szczegolnej wlasnosci.
