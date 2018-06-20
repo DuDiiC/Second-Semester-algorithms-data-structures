@@ -24,7 +24,7 @@ void loadDataIntoTheGraph(vector < V >  &G, V v) {
 
     TYPE V1, V2;
 
-    while(cin >> V1 >> V2 && V1 >0 && V2 > 0) {
+    while(cin >> V1 >> V2 && V1 != 0 && V2 != 0) {
         bool there = false;
         for(int i = 0; i < G.size(); ++i) {
             if(V1 == G[i].value) { //this vertex belongs to the graph
@@ -65,7 +65,7 @@ void writeSorted(vector < V > &G) {
     }
 }
 
-int main() {
+/*int main() {
 
     vector < V > graph;
     V representant;
@@ -75,4 +75,4 @@ int main() {
     writeSorted(graph);
 
     return 0;
-}
+}*/
