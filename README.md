@@ -1,6 +1,6 @@
 # Second Semester - Algorithms and data structures
 
-Tasks from the laboratory: Algorithms and data structures. 
+Tasks from the laboratory: __Algorithms and data structures__. 
 
 Tasks come from https://www.mat.umk.pl:8070/ZawodyWeb or they are additionally asked by the lecturer. Many tasks come from the https://uva.onlinejudge.org website.
 
@@ -52,10 +52,10 @@ Issues implemented during the course:
   > Boyer–Moore algorithm,
   > Knuth–Morris–Pratt algorithm
   
-As semester project I implemented a heuristic solution to the traveling salesman problem (TSP).
+As semester project I implemented a heuristic solution to __the traveling salesman problem (TSP)__.
 
-To create the first path of the graph I used the nearest neighbour algorithm - the salesman starts at a random city and repeatedly visits the nearest city until all have been visited. It quickly yields a short tour, but usually not the optimal one.
+To create the first path of the graph I used _the nearest neighbour algorithm_ - the salesman starts at a random city and repeatedly visits the nearest city until all have been visited. It quickly yields a short tour, but usually not the optimal one.
 
-To improve the solution I used 2-OPT alghorithm - the main idea behind it is to take a route that crosses over itself and reorder it so that it does not.
+To improve the solution I used _2-OPT alghorithm_ - the main idea behind it is to take a route that crosses over itself and reorder it so that it does not.
 
-I received a route algorithm about 10% longer than optimal.
+I received a route algorithm about __10%__ longer than optimal.
