@@ -6,7 +6,7 @@ Tasks come from https://www.mat.umk.pl:8070/ZawodyWeb or they are additionally a
 
 I used the functional programing paradigm and the c++ 14 standard.
 
-Issues implemented during the course:
+### Issues implemented during the course:
 
 - sorting algorithms:
   > radix sort,
@@ -52,7 +52,7 @@ Issues implemented during the course:
   > Boyer–Moore algorithm,
   > Knuth–Morris–Pratt algorithm
   
-As semester project I implemented a heuristic solution to __the traveling salesman problem (TSP)__.
+### As semester project I implemented a heuristic solution to the traveling salesman problem (TSP).
 
 To create the first path of the graph I used _the nearest neighbour algorithm_ - the salesman starts at a random city and repeatedly visits the nearest city until all have been visited. It quickly yields a short tour, but usually not the optimal one.
 
