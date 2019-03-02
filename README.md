@@ -21,36 +21,36 @@ I used the functional programing paradigm and the c++ 14 standard.
   > map,
   > vector
 - greedy algorithms and ynamic programming: 
-  > discrete knapsack problem, 
-  > change-making problem
+  - discrete knapsack problem
+  - change-making problem
 - graph (and directed graph) representation methods:
-  > adjacency matrix,
-  > incidence matrix,
-  > adjacency list
+  - adjacency matrix
+  - incidence matrix
+  - adjacency list
 - graph traversal:
-  > Depth First Search - DFS,
-  > Breadth First Search - BFS
+  - Depth First Search - DFS
+  - Breadth First Search - BFS
 - topological sorting
 - Minimum Spanning Tree (MST):
-  > Prim's algorithm,
-  > Kruskal's algorithm, 
-  > Borůvka's algorithm
+  - Prim's algorithm,
+  - Kruskal's algorithm, 
+  - Borůvka's algorithm
 - Bellman–Ford algorithm
 - Floyd–Warshall algorithm
 - disjoint-set data structure
 - maximum flow problem:
-  > Ford–Fulkerson algorithm,
-  > Dinic's algorithm
+  - Ford–Fulkerson algorithm,
+  - Dinic's algorithm
 - maximal matching in bigraf:
-  > for example hall's marriage theorem
+  - for example hall's marriage theorem
 - the least distant pair of points
 - Convex hull:
-  > Jarvis march/gift wrapping algorithm,
-  > Graham scan
+  - Jarvis march/gift wrapping algorithm,
+  - Graham scan
 - string-searching algorithms:
-  > Aho–Corasick algorithm,
-  > Boyer–Moore algorithm,
-  > Knuth–Morris–Pratt algorithm
+  - Aho–Corasick algorithm,
+  - Boyer–Moore algorithm,
+  - Knuth–Morris–Pratt algorithm
   
 ### As semester project I implemented a heuristic solution to the traveling salesman problem (TSP).
 
